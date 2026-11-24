@@ -1,0 +1,48 @@
+{
+  "name": "@snappedcut/cli",
+  "version": "0.1.0",
+  "description": "Render a Snapped Cut project from a terminal or a CI job.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "snappedcut": "./dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snappedcut-dev/cli.git"
+  },
+  "homepage": "https://snappedcut.com/docs",
+  "bugs": "https://github.com/snappedcut-dev/cli/issues",
+  "keywords": [
+    "snappedcut",
+    "video",
+    "render",
+    "cli"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/"
+  },
+  "dependencies": {
+    "@snappedcut/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.1",
+    "typescript": "5.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
