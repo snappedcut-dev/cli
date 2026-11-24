@@ -32,7 +32,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run build && node --test test/"
+    "test": "npm run build && node --test test/*.test.mjs"
   },
   "dependencies": {
     "@snappedcut/sdk": "^0.1.0"
